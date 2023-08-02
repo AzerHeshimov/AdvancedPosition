@@ -1,0 +1,28 @@
+#boxes
+    padding: 50px 0
+    .mainbox
+        .box
+            height: 200px
+            width: 200px
+            background-color: #5183a7
+            display: flex
+            justify-content: center
+            align-items: center
+        .minibox
+            width: 100px
+            height: 100px
+            background-color: #345880
+            color: #ffff
+            font-weight: 700
+            font-size: 20px
+            transition: 2.5s
+            &:hover
+                width: 150px
+                height: 150px
+                transition: 2.5s
+    @media ( max-width: 700px )
+        .mainbox
+            display: flex
+            flex-flow: column nowrap
+            justify-content: center
+            align-items: center

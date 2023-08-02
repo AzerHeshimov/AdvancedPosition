@@ -3,10 +3,10 @@ body {
   font-weight: 500;
 }
 
-#box {
-  padding: 100px;
+#boxes {
+  padding: 50px 0;
 }
-#box .box {
+#boxes .mainbox .box {
   height: 200px;
   width: 200px;
   background-color: #5183a7;
@@ -14,7 +14,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-#box .box .minibox {
+#boxes .mainbox .minibox {
   width: 100px;
   height: 100px;
   background-color: #345880;
@@ -23,13 +23,24 @@ body {
   font-size: 20px;
   transition: 2.5s;
 }
-#box .box .minibox:hover {
+#boxes .mainbox .minibox:hover {
   width: 150px;
   height: 150px;
   transition: 2.5s;
 }
+@media (max-width: 700px) {
+  #boxes .mainbox {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
-#demo .box {
+#demo {
+  padding: 50px 0;
+}
+#demo .box .minibox {
   width: 200px;
   height: 100px;
   color: white;
@@ -37,10 +48,100 @@ body {
   background-color: #88637b;
   border-radius: 5px;
   border: 5px solid #88637b;
-  transition: 1s;
+  transition: 2.5s;
 }
-#demo .box:hover {
+#demo .box .minibox:hover {
   background-color: #464253;
-  transition: 1;
+  transition: 2.5s;
   cursor: pointer;
+}
+@media (max-width: 800px) {
+  #demo .box .minibox {
+    height: 50px;
+    width: 100px;
+    background-color: #7485bf;
+    border: 5px solid #7485bf;
+  }
+}
+@media (max-width: 500px) {
+  #demo .box .minibox {
+    width: 50px;
+    height: 50px;
+    background-color: #3a1e2b;
+    border: 5px solid #3a1e2b;
+    font-size: 15px;
+  }
+}
+@media (max-width: 700px) {
+  #demo .box {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#circle {
+  padding: 50px 0;
+}
+#circle .box .minibox {
+  color: white;
+  font-size: 25px;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  background-color: #966d49;
+  transition: 2s;
+}
+#circle .box .minibox:hover {
+  border-radius: 40px;
+  transition: 2s;
+}
+@media (max-width: 800px) {
+  #circle .box .minibox {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    background-color: #c3c586;
+  }
+}
+@media (max-width: 700px) {
+  #circle .box {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+
+#blue {
+  padding: 50px 0;
+}
+#blue .minibox {
+  margin: 10px 0;
+  height: 150px;
+  width: 250px;
+  color: white;
+  font-size: 25px;
+  background-color: #476a8b;
+}
+#blue .mbp {
+  position: absolute;
+  left: 350px;
+  margin: 0;
+}
+
+#green {
+  padding: 50px 0;
+}
+#green .minibox {
+  margin: 10px 0;
+  height: 150px;
+  width: 250px;
+  color: white;
+  font-size: 25px;
+  background-color: #7b9f6e;
+}
+#green .mbp {
+  position: absolute;
+  left: 350px;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

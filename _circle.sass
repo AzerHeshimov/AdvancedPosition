@@ -1,2 +1,24 @@
 #circle
-    
+    padding: 50px 0
+    .box
+        .minibox
+            color: #ffff
+            font-size: 25px
+            height: 200px
+            width: 200px
+            border-radius: 100px
+            background-color: #966d49
+            transition: 2s
+            &:hover
+                border-radius: 40px
+                transition: 2s
+        @media ( max-width: 800px )
+            .minibox
+                height: 50px
+                width: 50px
+                border-radius: 30px
+                background-color: #c3c586
+    @media ( max-width: 700px )
+        .box
+            display: flex
+            flex-flow: column nowrap
